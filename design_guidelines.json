@@ -1,0 +1,105 @@
+{
+  "design_system": {
+    "identity": "E1 - The Anti-AI Designer",
+    "mission": "Create a premium, high-conversion marketing site for Escola Cruzeiro Vila Velha that rivals Nike/Adidas academies.",
+    "theme_strategy": "Hybrid",
+    "theme_logic": "Light mode base for clarity and trust, with deep blue 'Dark Mode' containers (Hero, Footer, Call-to-Action) to anchor the Cruzeiro brand identity.",
+    "colors": {
+      "primary": {
+        "hex": "#003399",
+        "name": "Cruzeiro Royal",
+        "usage": "Primary Brand Color, Headers, Hero Backgrounds"
+      },
+      "secondary": {
+        "hex": "#1a3080",
+        "name": "Midnight Navy",
+        "usage": "Footer, Deep contrast sections, Active states"
+      },
+      "accent": {
+        "hex": "#F1BE10",
+        "name": "Star Gold",
+        "usage": "Primary CTAs, Star Icons, High-priority highlights (Use sparingly)"
+      },
+      "neutral": {
+        "background": "#F8FAFC",
+        "surface": "#FFFFFF",
+        "text_primary": "#0F172A",
+        "text_secondary": "#475569",
+        "border": "#E2E8F0"
+      },
+      "feedback": {
+        "success": "#16A34A",
+        "error": "#DC2626"
+      }
+    },
+    "typography": {
+      "headings": {
+        "family": "Montserrat, sans-serif",
+        "weights": [700, 800, 900],
+        "style": "Uppercase, Tight Tracking (-0.02em)",
+        "usage": "Hero titles, Section headers, Card titles"
+      },
+      "body": {
+        "family": "Poppins, sans-serif",
+        "weights": [400, 500, 600],
+        "style": "Clean, legible, modern",
+        "usage": "Paragraphs, UI elements, Navigation"
+      }
+    },
+    "layout": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "grid_system": "Bento Grid (Asymmetric)",
+      "spacing": "Generous (2x standard). Use py-24 for major sections.",
+      "border_radius": {
+        "cards": "rounded-2xl",
+        "buttons": "rounded-full (Pill)"
+      }
+    },
+    "components": {
+      "buttons": {
+        "primary": "bg-[#F1BE10] text-[#003399] hover:bg-[#D4A000] font-bold uppercase tracking-wide shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 rounded-full px-8 py-4 text-lg",
+        "secondary": "bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold uppercase tracking-wide transition-all rounded-full px-8 py-4",
+        "whatsapp": "fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_12px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform animate-pulse"
+      },
+      "cards": {
+        "style": "bg-white rounded-2xl shadow-sm border border-slate-100 hover:shadow-md hover:border-blue-100 transition-all duration-300",
+        "glass": "bg-white/10 backdrop-blur-md border border-white/20 text-white"
+      },
+      "navbar": {
+        "initial": "bg-transparent text-white py-6",
+        "scrolled": "bg-[#003399]/95 backdrop-blur-md shadow-lg py-4"
+      }
+    },
+    "visual_enhancers": {
+      "overlays": "Use 'bg-gradient-to-r from-[#003399]/90 to-[#1a3080]/80' over hero images to ensure text legibility.",
+      "texture": "Add a subtle noise texture to deep blue backgrounds to mimic jersey fabric.",
+      "icons": "Lucide React (Stroke width: 1.5px or 2px). Use Gold color for trust icons."
+    },
+    "assets": {
+      "images": {
+        "hero_bg": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBzb2NjZXIlMjBjb2FjaCUyMHRyYWluaW5nJTIwa2lkc3xlbnwwfHx8fDE3NzMyODMzOTh8MA&ixlib=rb-4.1.0&q=85",
+        "coach_lucas": "https://images.unsplash.com/photo-1711937579551-ffb2307ab3cc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBzb2NjZXIlMjBjb2FjaCUyMHRyYWluaW5nJTIwa2lkc3xlbnwwfHx8fDE3NzMyODMzOTh8MA&ixlib=rb-4.1.0&q=85",
+        "facilities_bg": "https://images.unsplash.com/photo-1632072835323-74659dd03a40?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxzb2NjZXIlMjBmaWVsZCUyMGdyYXNzJTIwdHJhaW5pbmclMjBjb25lcyUyMGRldGFpbHN8ZW58MHx8fHwxNzczMjgzMzk5fDA&ixlib=rb-4.1.0&q=85",
+        "testimonial_parent": "https://images.unsplash.com/photo-1590962719070-0457bebed60c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MDV8MHwxfHNlYXJjaHwxfHxoYXBweSUyMHBhcmVudCUyMHdhdGNoaW5nJTIwc29jY2VyJTIwZ2FtZSUyMHNpZGVsaW5lc3xlbnwwfHx8fDE3NzMyODM0MDB8MA&ixlib=rb-4.1.0&q=85",
+        "trust_badge_stars": "Create a row of 5 gold stars using Lucide Star icon."
+      }
+    },
+    "universal_guidelines": [
+      "Mobile First: Design for the phone in hand. Large touch targets (min 44px).",
+      "No Generic Gradients: Use solid deep blues or subtle textures.",
+      "Data Test IDs: All interactive elements must have data-testid attributes.",
+      "Performance: Use lazy loading for images below the fold.",
+      "Accessibility: Ensure text contrast ratios meet WCAG AA (especially white text on blue).",
+      "Motion: Use scroll-reveal animations (fade-up) for sections to add dynamism."
+    ],
+    "instructions_to_main_agent": [
+      "1. Install 'lucide-react' if not present (it is in package.json).",
+      "2. Create a 'Layout' component that handles the sticky navbar logic.",
+      "3. Use the 'Hero' section to make a massive first impression. Full height.",
+      "4. The 'Programs' section should use a grid layout, not a simple list.",
+      "5. Ensure the WhatsApp button is always visible.",
+      "6. Use the defined hex codes strictly. Do not deviate to standard Tailwind blue.",
+      "7. For the 'Cruzeiro Badge', since we don't have the SVG, simulate it or use a placeholder circle with stars until provided."
+    ]
+  }
+}
