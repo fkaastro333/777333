@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 const testimonials = [
@@ -32,22 +32,22 @@ export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const goTo = (index) => {
+  const goTo = useCallback((index) => {
     if (isAnimating) return;
     setIsAnimating(true);
     setTimeout(() => {
       setCurrent(index);
       setIsAnimating(false);
     }, 200);
-  };
+  }, [isAnimating]);
 
-  const prev = () => goTo((current - 1 + testimonials.length) % testimonials.length);
-  const next = () => goTo((current + 1) % testimonials.length);
+  const prev = useCallback(() => goTo((current - 1 + testimonials.length) % testimonials.length), [current, goTo]);
+  const next = useCallback(() => goTo((current + 1) % testimonials.length), [current, goTo]);
 
   useEffect(() => {
     const interval = setInterval(next, 5000);
     return () => clearInterval(interval);
-  }, [current]);
+  }, [next]);
 
   const t = testimonials[current];
 
