@@ -16,11 +16,8 @@ export default function HeroSection() {
         style={{ backgroundImage: `url('${HERO_BG}')` }}
       />
 
-      {/* Gradiente azul sólido no topo → transparente no final */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#003399] via-[#003399]/90 to-[#003399]/20" />
-
-      {/* Fade lateral para legibilidade do texto */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#003399]/60 to-transparent" />
+      {/* Gradiente azul — termina na metade, revelando a foto abaixo */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#003399] via-[#003399]/85 via-[45%] to-transparent to-[68%]" />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 pb-24">
