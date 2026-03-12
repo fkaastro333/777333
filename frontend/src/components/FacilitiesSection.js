@@ -24,7 +24,7 @@ export default function FacilitiesSection() {
         {/* Header */}
         <div className="text-center mb-16 fade-up">
           <span
-            className="inline-block text-[#F1BE10] text-sm font-bold uppercase tracking-widest mb-3"
+            className="inline-block text-[#003399] text-sm font-bold uppercase tracking-widest mb-3"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             Infraestrutura
@@ -74,9 +74,9 @@ export default function FacilitiesSection() {
             </div>
 
             {/* Floating Stats */}
-            <div className="absolute -top-6 -right-6 bg-[#F1BE10] text-[#003399] rounded-2xl p-5 shadow-2xl">
+            <div className="absolute -top-6 -right-6 bg-white text-[#003399] rounded-2xl p-5 shadow-2xl border border-slate-100">
               <p
-                className="text-3xl font-black"
+                className="text-3xl font-black text-[#003399]"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 3x

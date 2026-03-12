@@ -26,7 +26,7 @@ export default function Footer() {
               <img
                 src={LOGO_URL}
                 alt="Escola Cruzeiro Vila Velha"
-                className="w-12 h-12 rounded-full object-cover border-2 border-[#F1BE10]/50"
+                className="w-12 h-12 rounded-full object-cover border-2 border-white/50"
               />
               <div>
                 <p
@@ -36,7 +36,7 @@ export default function Footer() {
                   ESCOLA CRUZEIRO
                 </p>
                 <p
-                  className="text-[#F1BE10] text-xs font-semibold tracking-widest"
+                  className="text-white/60 text-xs font-semibold tracking-widest"
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
                   VILA VELHA
@@ -169,7 +169,7 @@ export default function Footer() {
             className="text-2xl sm:text-3xl font-black text-white uppercase tracking-widest"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
-            JOGUE. <span className="text-[#F1BE10]">EVOLUA.</span> REPITA.
+            JOGUE. <span className="text-white/70">EVOLUA.</span> REPITA.
           </p>
           <p
             className="text-white/40 text-xs"

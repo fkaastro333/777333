@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
         {/* Header */}
         <div className="text-center mb-14 fade-up">
           <span
-            className="inline-block text-[#F1BE10] text-sm font-bold uppercase tracking-widest mb-3"
+            className="inline-block text-white text-sm font-bold uppercase tracking-widest mb-3"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             Depoimentos
@@ -87,12 +87,12 @@ export default function TestimonialsSection() {
             isAnimating ? 'opacity-0' : 'opacity-100'
           }`}
         >
-          <Quote size={40} className="text-[#F1BE10] mb-6 opacity-80" />
+          <Quote size={40} className="text-white/60 mb-6" />
 
           {/* Stars */}
           <div className="flex gap-1 mb-6">
             {Array.from({ length: t.rating }).map((_, i) => (
-              <Star key={i} size={18} className="text-[#F1BE10] fill-[#F1BE10]" />
+              <Star key={i} size={18} className="text-white fill-white" />
             ))}
           </div>
 
@@ -106,9 +106,9 @@ export default function TestimonialsSection() {
 
           {/* Author */}
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[#F1BE10]/20 border-2 border-[#F1BE10]/50 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full bg-white/20 border-2 border-white/50 flex items-center justify-center">
               <span
-                className="text-[#F1BE10] font-black text-lg"
+                className="text-white font-black text-lg"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 {t.name[0]}
@@ -142,7 +142,7 @@ export default function TestimonialsSection() {
                 onClick={() => goTo(i)}
                 className={`rounded-full transition-all duration-300 ${
                   i === current
-                    ? 'w-8 h-3 bg-[#F1BE10]'
+                    ? 'w-8 h-3 bg-white'
                     : 'w-3 h-3 bg-white/30 hover:bg-white/50'
                 }`}
                 aria-label={`Ir para depoimento ${i + 1}`}

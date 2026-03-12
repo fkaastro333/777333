@@ -40,22 +40,22 @@ export default function ThankYouPage() {
 
         <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 mb-8">
           <h3
-            className="text-[#F1BE10] font-bold text-lg mb-3 uppercase tracking-wide"
+            className="text-white font-bold text-lg mb-3 uppercase tracking-wide"
             style={{ fontFamily: 'Montserrat, sans-serif' }}
           >
             Proximos Passos
           </h3>
           <ul className="text-white/80 text-sm space-y-2 text-left" style={{ fontFamily: 'Poppins, sans-serif' }}>
             <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-[#F1BE10] rounded-full flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-white rounded-full flex-shrink-0"></span>
               Aguarde nosso contato via WhatsApp ou telefone
             </li>
             <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-[#F1BE10] rounded-full flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-white rounded-full flex-shrink-0"></span>
               Confirme o horário disponível com nossa equipe
             </li>
             <li className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-[#F1BE10] rounded-full flex-shrink-0"></span>
+              <span className="w-2 h-2 bg-white rounded-full flex-shrink-0"></span>
               Traga roupa esportiva e muita vontade de jogar!
             </li>
           </ul>
@@ -64,7 +64,7 @@ export default function ThankYouPage() {
         <Link
           to="/"
           data-testid="back-to-home"
-          className="inline-flex items-center gap-2 bg-[#F1BE10] text-[#003399] font-bold uppercase tracking-wide rounded-full px-8 py-4 hover:bg-[#D4A000] hover:-translate-y-1 transition-all duration-300 shadow-xl"
+          className="inline-flex items-center gap-2 bg-white text-[#003399] font-bold uppercase tracking-wide rounded-full px-8 py-4 hover:bg-white/90 hover:-translate-y-1 transition-all duration-300 shadow-xl"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           <ArrowLeft size={18} />

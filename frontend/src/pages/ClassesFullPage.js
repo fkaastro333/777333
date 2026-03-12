@@ -43,7 +43,7 @@ export default function ClassesFullPage() {
           <div className="flex items-center gap-3 mb-3">
             <Clock size={20} className="text-[#F1BE10]" />
             <h3
-              className="text-[#F1BE10] font-bold text-lg uppercase tracking-wide"
+              className="text-white font-bold text-lg uppercase tracking-wide"
               style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               Lista de Espera

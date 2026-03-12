@@ -28,18 +28,22 @@ export default function Navbar() {
       data-testid="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
         scrolled
-          ? 'bg-[#003399]/97 backdrop-blur-md shadow-2xl py-3'
-          : 'bg-transparent py-5'
+          ? 'bg-[#003399] shadow-2xl py-2'
+          : 'bg-[#003399]/85 backdrop-blur-md py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
+
+        {/* Logo em destaque */}
         <a href="#inicio" className="flex items-center gap-3 flex-shrink-0" data-testid="navbar-logo">
-          <img
-            src={LOGO_URL}
-            alt="Escola Cruzeiro Vila Velha"
-            className="w-10 h-10 rounded-full object-cover border-2 border-[#F1BE10]/50"
-          />
+          <div className="relative">
+            <div className="absolute inset-0 rounded-full bg-white/20 blur-md" />
+            <img
+              src={LOGO_URL}
+              alt="Escola Cruzeiro Vila Velha"
+              className="relative w-12 h-12 rounded-full object-cover border-2 border-white/80 shadow-lg"
+            />
+          </div>
           <div className="hidden sm:block leading-tight">
             <p
               className="text-white font-extrabold text-sm tracking-wide"
@@ -48,7 +52,7 @@ export default function Navbar() {
               ESCOLA CRUZEIRO
             </p>
             <p
-              className="text-[#F1BE10] text-xs font-semibold tracking-widest"
+              className="text-white/70 text-xs font-medium tracking-widest"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               VILA VELHA
@@ -62,7 +66,7 @@ export default function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className="text-white/85 hover:text-[#F1BE10] text-sm font-medium transition-colors duration-200"
+              className="text-white/80 hover:text-white text-sm font-medium transition-colors duration-200 hover:underline underline-offset-4"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               {link.label}
@@ -74,7 +78,7 @@ export default function Navbar() {
         <a
           href="#contato"
           data-testid="navbar-cta"
-          className="hidden lg:block bg-[#F1BE10] text-[#003399] font-bold uppercase tracking-wide rounded-full px-6 py-2.5 text-sm hover:bg-[#D4A000] hover:-translate-y-0.5 transition-all duration-200 shadow-lg flex-shrink-0"
+          className="hidden lg:block bg-white text-[#003399] font-bold uppercase tracking-wide rounded-full px-6 py-2.5 text-sm hover:bg-white/90 hover:-translate-y-0.5 transition-all duration-200 shadow-lg flex-shrink-0"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           Aula Experimental
@@ -103,7 +107,7 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="text-white hover:text-[#F1BE10] hover:bg-white/5 py-3 px-2 rounded-lg text-base font-medium transition-all"
+                className="text-white/80 hover:text-white hover:bg-white/5 py-3 px-2 rounded-lg text-base font-medium transition-all"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 {link.label}
@@ -112,7 +116,7 @@ export default function Navbar() {
             <a
               href="#contato"
               onClick={() => setMenuOpen(false)}
-              className="bg-[#F1BE10] text-[#003399] font-bold uppercase tracking-wide rounded-full px-6 py-3 text-sm text-center hover:bg-[#D4A000] transition-all duration-200 mt-3"
+              className="bg-white text-[#003399] font-bold uppercase tracking-wide rounded-full px-6 py-3 text-sm text-center hover:bg-white/90 transition-all duration-200 mt-3"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               Aula Experimental Grátis

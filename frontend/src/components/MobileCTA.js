@@ -7,7 +7,7 @@ export default function MobileCTA() {
       <a
         href="#contato"
         data-testid="mobile-sticky-cta-btn"
-        className="block w-full bg-[#F1BE10] text-[#003399] text-center font-bold uppercase tracking-wide py-3 rounded-full text-sm hover:bg-[#D4A000] transition-colors duration-200"
+        className="block w-full bg-white text-[#003399] text-center font-bold uppercase tracking-wide py-3 rounded-full text-sm hover:bg-white/90 transition-colors duration-200"
         style={{ fontFamily: 'Poppins, sans-serif' }}
       >
         Agendar Aula Gratuita

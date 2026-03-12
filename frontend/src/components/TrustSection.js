@@ -5,7 +5,7 @@ const trustItems = [
     icon: Trophy,
     title: 'Treinadores Profissionais',
     description: 'Nossa equipe é formada por treinadores certificados com experiência em futebol competitivo e formação de jovens atletas.',
-    color: '#F1BE10',
+    color: '#003399',
   },
   {
     icon: Shield,
@@ -17,7 +17,7 @@ const trustItems = [
     icon: Star,
     title: 'Metodologia Comprovada',
     description: 'Nosso método de ensino é baseado nas melhores práticas internacionais de desenvolvimento esportivo juvenil.',
-    color: '#F1BE10',
+    color: '#003399',
   },
 ];
 

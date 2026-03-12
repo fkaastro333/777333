@@ -51,7 +51,7 @@ export default function ProgramsSection() {
         {/* Header */}
         <div className="text-center mb-16 fade-up">
           <span
-            className="inline-block text-[#F1BE10] text-sm font-bold uppercase tracking-widest mb-3"
+            className="inline-block text-[#003399] text-sm font-bold uppercase tracking-widest mb-3"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             Modalidades
@@ -85,7 +85,7 @@ export default function ProgramsSection() {
                 }`}
               >
                 {program.featured && (
-                  <div className="absolute top-4 right-4 bg-[#F1BE10] text-[#003399] text-xs font-bold rounded-full px-3 py-1 uppercase tracking-wide">
+                  <div className="absolute top-4 right-4 bg-white text-[#003399] text-xs font-bold rounded-full px-3 py-1 uppercase tracking-wide">
                     Popular
                   </div>
                 )}
@@ -127,7 +127,7 @@ export default function ProgramsSection() {
                   {/* Age */}
                   <p
                     className={`text-sm font-semibold mb-4 ${
-                      program.featured ? 'text-[#F1BE10]' : 'text-[#003399]'
+                      program.featured ? 'text-white/80' : 'text-[#003399]'
                     }`}
                     style={{ fontFamily: 'Poppins, sans-serif' }}
                   >
@@ -156,7 +156,7 @@ export default function ProgramsSection() {
                       >
                         <span
                           className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
-                            program.featured ? 'bg-[#F1BE10]' : 'bg-[#003399]'
+                            program.featured ? 'bg-white' : 'bg-[#003399]'
                           }`}
                         />
                         {h}

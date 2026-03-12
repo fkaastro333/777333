@@ -33,7 +33,7 @@ export default function AboutSection() {
             {/* Floating badge */}
             <div className="absolute -bottom-6 -right-6 bg-[#003399] text-white rounded-2xl p-6 shadow-2xl">
               <p
-                className="text-3xl font-black text-[#F1BE10]"
+                className="text-3xl font-black text-white"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 5+
@@ -51,7 +51,7 @@ export default function AboutSection() {
           {/* Content */}
           <div className="slide-right">
             <span
-              className="inline-block text-[#F1BE10] text-sm font-bold uppercase tracking-widest mb-4"
+              className="inline-block text-[#003399] text-sm font-bold uppercase tracking-widest mb-4"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               Nossa História
@@ -88,7 +88,7 @@ export default function AboutSection() {
                   className="flex items-center gap-3"
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
-                  <CheckCircle2 size={20} className="text-[#F1BE10] flex-shrink-0" />
+                  <CheckCircle2 size={20} className="text-[#003399] flex-shrink-0" />
                   <span className="text-[#475569] text-sm">{value}</span>
                 </li>
               ))}

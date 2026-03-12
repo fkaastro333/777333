@@ -26,7 +26,7 @@ export default function CoachesSection() {
         {/* Header */}
         <div className="text-center mb-16 fade-up">
           <span
-            className="inline-block text-[#F1BE10] text-sm font-bold uppercase tracking-widest mb-3"
+            className="inline-block text-[#003399] text-sm font-bold uppercase tracking-widest mb-3"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             Equipe Técnica

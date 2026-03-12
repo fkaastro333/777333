@@ -1,6 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 
 const HERO_BG = 'https://customer-assets.emergentagent.com/job_academy-talento/artifacts/aoywedwu_532318169_17951559602990849_5719894322516491368_n..webp';
+const LOGO_URL = 'https://customer-assets.emergentagent.com/job_academy-talento/artifacts/n8ugzokq_471621460_460486846915306_2809886453613972521_n.jpg';
 
 export default function HeroSection() {
   return (
@@ -11,33 +12,57 @@ export default function HeroSection() {
     >
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('${HERO_BG}')` }}
       />
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#003399]/92 via-[#003399]/78 to-[#1a3080]/65" />
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#F8FAFC] to-transparent" />
+
+      {/* Gradiente azul sólido no topo → transparente no final */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#003399] via-[#003399]/90 to-[#003399]/20" />
+
+      {/* Fade lateral para legibilidade do texto */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#003399]/60 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-5 py-2 text-white/90 text-sm font-medium mb-8">
-          <span className="w-2 h-2 bg-[#F1BE10] rounded-full animate-pulse"></span>
-          <span style={{ fontFamily: 'Poppins, sans-serif' }}>Vila Velha – Espírito Santo, Brasil</span>
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 pb-24">
+
+        {/* LOGO EM DESTAQUE */}
+        <div className="flex justify-center mb-6">
+          <div className="relative">
+            <div className="absolute inset-0 rounded-full bg-white/20 blur-xl scale-125" />
+            <img
+              src={LOGO_URL}
+              alt="Escola Cruzeiro Vila Velha"
+              className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover border-4 border-white shadow-[0_0_40px_rgba(255,255,255,0.4)] ring-4 ring-white/30"
+            />
+          </div>
         </div>
+
+        {/* Nome da Escola */}
+        <p
+          className="text-white/90 text-sm sm:text-base font-semibold uppercase tracking-[0.25em] mb-6"
+          style={{ fontFamily: 'Poppins, sans-serif' }}
+        >
+          Escola Cruzeiro · Vila Velha – ES
+        </p>
 
         {/* Headline */}
         <h1
-          className="text-5xl sm:text-7xl lg:text-8xl font-black text-white uppercase tracking-tight mb-6 leading-none"
+          className="text-5xl sm:text-7xl lg:text-8xl font-black text-white uppercase tracking-tight mb-5 leading-none"
           style={{ fontFamily: 'Montserrat, sans-serif' }}
         >
           TREINA.
           <br />
-          <span className="text-[#F1BE10]">DESENVOLVE.</span>
+          <span className="text-white/80">DESENVOLVE.</span>
           <br />
           VENCE.
         </h1>
+
+        {/* Linha divisora */}
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <div className="h-px w-16 bg-white/40" />
+          <div className="w-2 h-2 rounded-full bg-white" />
+          <div className="h-px w-16 bg-white/40" />
+        </div>
 
         {/* Subheadline */}
         <p
@@ -47,18 +72,18 @@ export default function HeroSection() {
           Treinamento profissional de futebol para crianças e adolescentes em Vila Velha.
         </p>
         <p
-          className="text-base text-white/65 max-w-xl mx-auto mb-10"
+          className="text-base text-white/60 max-w-xl mx-auto mb-10"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           Ajudando jovens atletas a construírem confiança, disciplina e habilidades no futebol.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-14">
           <a
             href="#contato"
             data-testid="hero-cta-primary"
-            className="bg-[#F1BE10] text-[#003399] font-bold uppercase tracking-wide rounded-full px-10 py-4 text-base hover:bg-[#D4A000] hover:-translate-y-1 transition-all duration-300 shadow-xl hover:shadow-2xl w-full sm:w-auto text-center"
+            className="bg-white text-[#003399] font-bold uppercase tracking-wide rounded-full px-10 py-4 text-base hover:bg-white/90 hover:-translate-y-1 transition-all duration-300 shadow-[0_4px_24px_rgba(255,255,255,0.3)] hover:shadow-[0_8px_32px_rgba(255,255,255,0.4)] w-full sm:w-auto text-center"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
             Agendar Aula Gratuita
@@ -74,21 +99,24 @@ export default function HeroSection() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-6 max-w-md mx-auto mb-16">
+        <div className="grid grid-cols-3 gap-6 max-w-sm mx-auto">
           {[
             { number: '200+', label: 'Alunos' },
             { number: '5+', label: 'Anos de Experiência' },
             { number: '100%', label: 'Dedicação' },
-          ].map((stat) => (
+          ].map((stat, i) => (
             <div key={stat.label} className="text-center">
+              {i > 0 && (
+                <div className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 h-8 w-px bg-white/20" />
+              )}
               <p
-                className="text-2xl sm:text-3xl font-black text-[#F1BE10]"
+                className="text-2xl sm:text-3xl font-black text-white"
                 style={{ fontFamily: 'Montserrat, sans-serif' }}
               >
                 {stat.number}
               </p>
               <p
-                className="text-white/65 text-xs sm:text-sm mt-1 leading-tight"
+                className="text-white/55 text-xs sm:text-sm mt-1 leading-tight"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 {stat.label}
@@ -99,11 +127,11 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 z-10">
         <p className="text-white/40 text-xs" style={{ fontFamily: 'Poppins, sans-serif' }}>
           Role para baixo
         </p>
-        <ChevronDown size={24} className="text-white/40 animate-bounce" />
+        <ChevronDown size={22} className="text-white/40 animate-bounce" />
       </div>
     </section>
   );
