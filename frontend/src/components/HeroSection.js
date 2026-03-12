@@ -1,6 +1,6 @@
 import { ChevronDown } from 'lucide-react';
 
-const HERO_BG = 'https://images.unsplash.com/photo-1526232761682-d26e03ac148e?w=1920&q=85';
+const HERO_BG = 'https://customer-assets.emergentagent.com/job_academy-talento/artifacts/aoywedwu_532318169_17951559602990849_5719894322516491368_n..webp';
 
 export default function HeroSection() {
   return (
